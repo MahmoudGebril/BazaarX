@@ -70,6 +70,17 @@ import { I18nPipe } from '../../../shared/pipes/i18n.pipe';
       align-items: center;
       gap: 1.5rem;
     }
+    @media (max-width: 640px) {
+      .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
     .nav a {
       color: oklch(0.45 0.05 260);
       text-decoration: none;

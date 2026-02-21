@@ -1,8 +1,8 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { CartItem } from '../models/cart-item.model';
 import { Product } from '../models/product.model';
-import { DataService } from './data.service';
 
+/** Signal-based cart state. Totals and item count are derived via computed(). */
 @Injectable({ providedIn: 'root' })
 export class CartStore {
   private items = signal<CartItem[]>([]);
@@ -14,7 +14,6 @@ export class CartStore {
   );
   readonly isEmpty = computed(() => this.items().length === 0);
 
-  constructor(private data: DataService) {}
 
   addItem(product: Product, quantity = 1, lang: 'en' | 'ar' = 'en'): void {
     const existing = this.items().find(i => i.productId === product.id);

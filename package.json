@@ -1,6 +1,14 @@
 {
   "name": "bazaar-x",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Modern Angular 20+ e-commerce demo with signals-based cart, EN/AR i18n, and admin analytics",
+  "author": "Mahmoud Gebril",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MahmoudGebril/BazaarX.git"
+  },
+  "keywords": ["angular", "e-commerce", "signals", "i18n", "rtl", "demo"],
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,16 +19,8 @@
   "prettier": {
     "printWidth": 100,
     "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
+    "overrides": [{"files": "*.html", "options": {"parser": "angular"}}]
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^20.3.16",
     "@angular/common": "^20.2.0",
